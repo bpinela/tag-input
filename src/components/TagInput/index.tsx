@@ -13,8 +13,8 @@ const TagInput = () => {
 
   return (
     <>
-      <input ref={inputRef} type="text" onKeyDown={handleKeyDown} />
-      {tags && tags.map((tag) => <span>{tag}</span>)}
+      <input type="text" ref={inputRef} className="tagify w-full leading-5 relative text-sm py-2 px-4 rounded text-gray-800 bg-white border border-gray-300 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-300 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600" onKeyDown={handleKeyDown} />
+      {tags && tags.map((tag, index) => <span key={index} className="bg-gray-500 p-1">{tag}</span>)}
     </>
   )
 }
